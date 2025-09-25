@@ -50,7 +50,7 @@ public class Solution {
         if (b != 0) {
             return gcd(b, a % b);
         }
-        return a;
+        return Math.abs(a);
     }
 
     /** Rut gon phan so. */
@@ -58,6 +58,10 @@ public class Solution {
         int gcd = gcd(this.numerator, this.denominator);
         this.numerator /= gcd;
         this.denominator /= gcd;
+        if (this.denominator < 0) {
+            this.numerator = -this.numerator;
+            this.denominator = -this.denominator;
+        }
         return this;
     }
 
@@ -84,6 +88,9 @@ public class Solution {
 
     /** divide. */
     public Solution divide(Solution other) {
+        if (other.numerator == 0) {
+            return this;
+        }
         this.numerator = this.numerator * other.denominator;
         this.denominator = this.denominator * other.numerator;
         return this.reduce();
