@@ -1,5 +1,7 @@
 // Import your library
 // Do not change the name of the Solution class
+package Week1.Fibonacci;
+
 public class Solution {
     /**
      * find n-th fibonacci number.

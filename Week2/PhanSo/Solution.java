@@ -1,5 +1,6 @@
 // Import your library
 // Do not change the name of the Solution class
+package Week2.PhanSo;
 
 public class Solution {
     // Type your main code here

@@ -1,5 +1,7 @@
 // Import your library
 // Do not change the name of the Solution class
+package Week1.Helloworld;
+
 public class Solution {
     public static String printHello() {
         return "HelloWorld";
